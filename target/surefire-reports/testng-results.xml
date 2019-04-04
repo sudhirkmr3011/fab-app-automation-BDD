@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestNG Learning" duration-ms="43071" started-at="2019-04-04T19:59:49Z" finished-at="2019-04-04T20:00:32Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="Fab_runner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Main_Runner.Fab_runner@3cbbc1e0]" name="feature" class="Main_Runner.Fab_runner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="UICatalog Test" duration-ms="43071" started-at="2019-04-04T19:59:49Z" finished-at="2019-04-04T20:00:32Z">
+      <class name="Main_Runner.Fab_runner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Main_Runner.Fab_runner@3cbbc1e0]" name="setUpClass" is-config="true" duration-ms="206" started-at="2019-04-04T23:59:49Z" finished-at="2019-04-04T23:59:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Main_Runner.Fab_runner@3cbbc1e0]" name="feature" duration-ms="42350" started-at="2019-04-04T23:59:49Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-04-05T00:00:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Appium]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Main_Runner.Fab_runner@3cbbc1e0]" name="tearDownClass" is-config="true" duration-ms="412" started-at="2019-04-05T00:00:31Z" finished-at="2019-04-05T00:00:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="Report()[pri:0, instance:Main_Runner.Fab_runner@3cbbc1e0]" name="Report" is-config="true" duration-ms="0" started-at="2019-04-05T00:00:32Z" finished-at="2019-04-05T00:00:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+      </class> <!-- Main_Runner.Fab_runner -->
+    </test> <!-- UICatalog Test -->
+  </suite> <!-- TestNG Learning -->
+</testng-results>

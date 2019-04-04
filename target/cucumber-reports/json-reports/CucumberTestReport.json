@@ -1,0 +1,96 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "comments": [
+          {
+            "line": 4,
+            "value": "#Background: lalala"
+          },
+          {
+            "line": 5,
+            "value": "#Given login we will do common"
+          }
+        ],
+        "line": 9,
+        "name": "Personal details",
+        "description": "",
+        "id": "appium;personal-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11754437116,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I click on checkbox",
+            "match": {
+              "location": "stepdef_personaldetails.i_click_on_checkbox()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10842106147,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "i click on fullname",
+            "match": {
+              "location": "stepdef_personaldetails.i_click_on_fullname()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 966931516,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "i click on next button",
+            "match": {
+              "location": "stepdef_personaldetails.i_click_on_next_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "Contact details",
+        "description": "",
+        "id": "appium;contact-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 18444142200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "i click city",
+            "match": {
+              "location": "stepdef_contactdetails.i_click_city()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Appium",
+    "description": "",
+    "id": "appium",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/fab/onboarding/feature/FAB_ONBOARDING_BDD.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@LoginProfile"
+      }
+    ]
+  }
+]

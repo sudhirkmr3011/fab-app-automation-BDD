@@ -1,0 +1,11 @@
+2019-03-31 18:46:21:983 [Appium] Welcome to Appium v1.11.1
+2019-03-31 18:46:21:984 [Appium] Non-default server args:
+2019-03-31 18:46:21:985 [Appium]   logFile: /Users/sudkumar10/new_prj/fab-app-automation/src/test/resources/logs/Appium.log
+2019-03-31 18:46:21:985 [Appium]   localTimezone: true
+2019-03-31 18:46:22:008 [Appium] Appium REST http interface listener started on 0.0.0.0:4723
+2019-03-31 18:46:22:220 [HTTP] --> GET /wd/hub/status
+2019-03-31 18:46:22:220 [HTTP] {}
+2019-03-31 18:46:22:222 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2019-03-31 18:46:22:224 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.11.1"}}
+2019-03-31 18:46:22:229 [HTTP] <-- GET /wd/hub/status 200 7 ms - 68
+2019-03-31 18:46:22:229 [HTTP] 

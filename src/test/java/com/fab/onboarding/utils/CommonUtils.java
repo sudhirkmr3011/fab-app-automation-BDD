@@ -1,0 +1,90 @@
+package com.fab.onboarding.utils;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+public class CommonUtils {
+	
+	
+	private static Properties prop = new Properties();
+	public static int EXPLICIT_WAIT_TIME;
+	public static int IMPLICIT_WAIT_TIME;
+	public static int DEFAULT_WAIT_TIME;
+	public static String APPLICATION_NAME;
+	public static String BASE_PKG;
+	public static String APP_ACTIVITY;
+	public static String APP_PASSWORD;
+	private static String APPIUM_PORT;
+	public static String AUTOMATION_INSTRUMENTATION;
+	public static String BROWSER_NAME;
+	public static String PLATFORM_NAME;
+	public static String NEW_COMMAND_TIMEOUT;
+	public static String PLATFORM_VERSION;
+	public static String DEVICE_READY_TIMEOUT;
+	public static String DEVICE_NAME;
+	public static String DEVICE;
+	public static String PLATFORM;
+	private static DesiredCapabilities capabilities = new DesiredCapabilities();
+	private static URL serverUrl;
+	private static AndroidDriver<AndroidElement> driver;
+	
+	public static void loadConfigProp(String propertyFileName) throws IOException
+	
+	
+	 {
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//properties//"+propertyFileName);
+		prop.load(fis);
+		
+		EXPLICIT_WAIT_TIME = Integer.parseInt(prop.getProperty("explicit.wait"));
+		IMPLICIT_WAIT_TIME = Integer.parseInt(prop.getProperty("implicit.wait"));
+		DEFAULT_WAIT_TIME = Integer.parseInt(prop.getProperty("default.wait"));
+		APPLICATION_NAME = prop.getProperty("application.path");
+		BASE_PKG = prop.getProperty("base.pkg");
+		APP_ACTIVITY = prop.getProperty("application.activity");
+		APPIUM_PORT = prop.getProperty("appium.server.port");
+		AUTOMATION_INSTRUMENTATION=prop.getProperty("automation.instumentation");
+		DEVICE_NAME=prop.getProperty("device.name");
+		BROWSER_NAME=prop.getProperty("browser.name");
+		PLATFORM_NAME=prop.getProperty("platform.name");
+		PLATFORM_VERSION=prop.getProperty("platform.version");
+		NEW_COMMAND_TIMEOUT=prop.getProperty("new.command.timeout");
+		DEVICE_READY_TIMEOUT=prop.getProperty("device.ready.timeout");
+		DEVICE=prop.getProperty("device");
+		PLATFORM=prop.getProperty("platform");
+
+}
+	
+	public static void setCapabilities() {
+		
+		
+		capabilities.setCapability("device",CommonUtils.DEVICE);
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,CommonUtils.DEVICE_NAME);
+		capabilities.setCapability(MobileCapabilityType.PLATFORM,CommonUtils.PLATFORM);
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,CommonUtils.PLATFORM_NAME);
+		capabilities.setCapability("appPackage",CommonUtils.BASE_PKG);
+		capabilities.setCapability("appActivity",CommonUtils.APP_ACTIVITY);
+		
+		
+		
+	}
+	
+	public static AndroidDriver<AndroidElement> getDriver() throws MalformedURLException {
+		serverUrl = new URL("http://localhost:" + APPIUM_PORT + "/wd/hub");		
+		driver = new AndroidDriver<AndroidElement>(serverUrl, capabilities);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		return driver;
+	}
+
+	
+
+}

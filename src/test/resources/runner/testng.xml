@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Learning" >
+
+
+
+
+<test name="UICatalog Test">
+    <classes>
+        <class name="Main_Runner.Fab_runner" ></class> 
+        
+    </classes>
+</test>
+
+
+
+
+
+
+
+
+</suite>
